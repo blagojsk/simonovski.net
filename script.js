@@ -156,9 +156,39 @@ function downloadResumePDF() {
                 date: 'August 2025 - ongoing',
                 duties: [
                     'Architecture and infrastructure design',
+                    'Domain Driven Design and Data Architecture',
                     'Integration of web application with RAG-optimized LLMs',
+                    'Integration of Quarkus with LangChain4j',
+                    'Deploying containerized Ollama models',
                     'Code and development practices review',
-                    'Project and delivery management'
+                    'Project and delivery management',
+                    'Discovery and business analysis'
+                ]
+            },
+            {
+                company: 'Logistics Web Platform',
+                title: 'Solutions Architect',
+                date: 'September 2025 - November 2025',
+                duties: [
+                    'Architecture and infrastructure design',
+                    'Domain Driven Design and Data Architecture',
+                    'Order processing with Spring AI and Gemini API',
+                    'Building Vaadin UIs',
+                    'Code and development practices review',
+                    'Project and delivery management',
+                    'Discovery and business analysis'
+                ]
+            },
+            {
+                company: 'eSchool Platform',
+                title: 'Solutions Architect',
+                date: 'January 2025 - October 2025',
+                duties: [
+                    'Architecture and infrastructure design',
+                    'Domain Driven Design and Data Architecture',
+                    'Code and development practices review',
+                    'Project and delivery management',
+                    'Discovery and business analysis'
                 ]
             },
             {
@@ -168,7 +198,8 @@ function downloadResumePDF() {
                 duties: [
                     'Architecture and infrastructure design',
                     'Integration planning',
-                    'Code and development practices review'
+                    'Code and development practices review',
+                    'Discovery and business analysis'
                 ]
             },
             {
