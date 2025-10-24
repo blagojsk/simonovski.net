@@ -20,11 +20,16 @@
         <div class="container">
             <div class="text-center">
                 <h1 class="fade-in">BLAGOJ SIMONOVSKI</h1>
-                <h2 class="fade-in">SOFTWARE ARCHITECT</h2>
+                <h2 class="fade-in">SOLUTIONS ARCHITECT</h2>
                 <div class="contact-info d-inline-block fade-in">
                     <i class="bi bi-telephone-fill"></i> 00389 75 787 423 &nbsp;|&nbsp;
                     <i class="bi bi-geo-alt-fill"></i> Skopje, Macedonia &nbsp;|&nbsp;
                     <i class="bi bi-envelope-fill"></i> <a href="mailto:blagojsk@gmail.com">blagojsk@gmail.com</a>
+                </div>
+                <div class="mt-3 fade-in">
+                    <button onclick="downloadResumePDF()" class="btn btn-primary">
+                        <i class="bi bi-download"></i> Download Resume (PDF)
+                    </button>
                 </div>
             </div>
         </div>
@@ -71,8 +76,8 @@
                 <div class="col-12">
                     <h3 class="section-title">Professional Summary</h3>
                     <div class="summary-text">
-                        <p>Blagoj is a Software Architect skilled in designing cloud and software solutions. He is also experienced in backend development, database design and DevOps transformations. He is used to working with various technologies, delivering solutions based on different types of software architectures, on any of the major cloud vendors. His recent experience is mainly focused on the Java ecosystem and AWS, incorporating many development stacks and open-source technologies.</p>
-                        <p>Blagoj enjoys working with all team types and driving big initiatives. His main motivation is delivering software of value and the feeling of shared success.</p>
+                        <p>I am a Software Architect with a passion for designing elegant cloud and software solutions. My expertise spans backend development, database architecture, and DevOps transformations. Throughout my career, I've worked with diverse technologies and delivered solutions across various architectural patterns on all major cloud platforms. My recent work focuses primarily on the Java ecosystem and AWS, where I leverage a wide range of development stacks and open-source technologies.</p>
+                        <p>I thrive in collaborative environments, working with teams of all sizes and leading transformative initiatives. What drives me is the opportunity to create software that delivers real value and the satisfaction of achieving success together with my team.</p>
                     </div>
                 </div>
             </div>
@@ -380,6 +385,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jsPDF for PDF generation -->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
 
     <!-- Custom JS -->
     <script src="script.js"></script>

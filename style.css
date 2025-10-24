@@ -220,19 +220,70 @@ html {
     color: var(--secondary-color);
 }
 
+/* PDF and Print Styles */
 @media print {
     .header-section {
         background: var(--primary-color);
+        page-break-after: avoid;
     }
+
     .experience-item, .education-item {
         page-break-inside: avoid;
+        break-inside: avoid;
     }
-    .sticky-nav, #back-to-top {
-        display: none;
+
+    .skill-category {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
+
+    .cert-item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .section-title {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
     .resume-section {
         page-break-before: auto;
+        break-before: auto;
     }
+
+    .sticky-nav, #back-to-top, footer {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .experience-item:hover, .education-item:hover {
+        transform: none;
+    }
+}
+
+/* PDF-specific styles (applied via class) */
+.pdf-mode .sticky-nav,
+.pdf-mode #back-to-top,
+.pdf-mode footer,
+.pdf-mode button[onclick="downloadResumePDF()"] {
+    display: none !important;
+}
+
+.pdf-mode .experience-item,
+.pdf-mode .education-item,
+.pdf-mode .skill-category,
+.pdf-mode .cert-item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.pdf-mode .section-title {
+    page-break-after: avoid;
+    break-after: avoid;
 }
 
 @media (max-width: 768px) {
