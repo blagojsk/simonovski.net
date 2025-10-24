@@ -157,7 +157,7 @@ function downloadResumePDF() {
                 duties: [
                     'Architecture and infrastructure design',
                     'Domain Driven Design and Data Architecture',
-                    'Integration of web application with RAG-optimized LLMs',
+                    'Integration of web services with RAG-optimized LLMs',
                     'Integration of Quarkus with LangChain4j',
                     'Deploying containerized Ollama models',
                     'Code and development practices review',
