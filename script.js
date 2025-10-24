@@ -134,7 +134,7 @@ function downloadResumePDF() {
         doc.setFontSize(10);
         doc.setTextColor(...textColor);
         doc.setFont('helvetica', 'normal');
-        const summaryText = "I am a Software Architect with a passion for designing elegant cloud and software solutions. My expertise spans backend development, database architecture, and DevOps transformations. Throughout my career, I've worked with diverse technologies and delivered solutions across various architectural patterns on all major cloud platforms. My recent work focuses primarily on the Java ecosystem and AWS, where I leverage a wide range of development stacks and open-source technologies.\n\nI thrive in collaborative environments, working with teams of all sizes and leading transformative initiatives. What drives me is the opportunity to create software that delivers real value and the satisfaction of achieving success together with my team.";
+        const summaryText = "I am a Solutions Architect with over 8 years of experience designing and implementing scalable cloud and software solutions across diverse industries. My expertise encompasses the full software lifecycle, from pre-sales technical consulting and rapid prototyping to high-level architectural design, infrastructure planning, hands-on backend development, database optimization, and DevOps automation. I have successfully delivered solutions across microservices, event-driven, and serverless architectures on all major cloud platforms (AWS, Azure, Google Cloud), with particular depth in the Java ecosystem, Spring Boot, and modern data technologies including PostgreSQL, vector databases, and LLMs. I excel at building proof-of-concepts that validate technical feasibility and accelerate decision-making, while also supporting sales teams with technical expertise during client engagements. Throughout my career, I've led cross-functional teams, mentored developers, and driven strategic technical initiatives that balance business objectives with engineering excellence. I thrive in collaborative environments where I can contribute to both the technical vision and the day-to-day problem-solving that brings that vision to life. What truly motivates me is creating software that delivers tangible value to users and organizations, while fostering a culture of continuous improvement, shared learning, and collective success within my teams.";
         yPos += addText(summaryText, leftMargin, yPos, rightMargin - leftMargin, 10, textColor);
         yPos += 10;
 
@@ -151,9 +151,20 @@ function downloadResumePDF() {
         // Experience items
         const experiences = [
             {
+                company: 'AVIATION AI RAG Platform',
+                title: 'Solutions Architect',
+                date: 'August 2025 - ongoing',
+                duties: [
+                    'Architecture and infrastructure design',
+                    'Integration of web application with RAG-optimized LLMs',
+                    'Code and development practices review',
+                    'Project and delivery management'
+                ]
+            },
+            {
                 company: 'AVIATION IT SYSTEM',
                 title: 'Software Architect',
-                date: 'April 2024 – Ongoing',
+                date: 'April 2024 – August 2025',
                 duties: [
                     'Architecture and infrastructure design',
                     'Integration planning',
@@ -278,7 +289,7 @@ function downloadResumePDF() {
             },
             {
                 category: 'Data',
-                items: 'SQL, PostgreSQL, PgBouncer, PgVector, MySQL, Elasticsearch, Cassandra, Ollama'
+                items: 'SQL, PostgreSQL, PgBouncer, PgVector, MySQL, Elasticsearch, Cassandra, LLMs, Ollama'
             },
             {
                 category: 'Infrastructure',
