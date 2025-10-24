@@ -1,0 +1,255 @@
+:root {
+    --primary-color: #4A7BA7;
+    --secondary-color: #2C5282;
+    --light-bg: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.header-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.header-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.header-section h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    background: white;
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover, .education-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateX(5px);
+}
+
+.job-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.company-name {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.date-range {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.skill-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0.3rem;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+.skill-category-title {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.cert-item {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cert-item:last-child {
+    border-bottom: none;
+}
+
+.cert-item i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.sticky-nav .nav {
+    padding: 1rem 0;
+}
+
+.sticky-nav .nav-link {
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sticky-nav .nav-link:hover {
+    background: var(--light-bg);
+    color: var(--primary-color);
+}
+
+.sticky-nav .nav-link.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.resume-section {
+    padding: 3rem 0;
+    scroll-margin-top: 80px;
+}
+
+.resume-section:not(:last-child) {
+    border-bottom: 2px solid var(--border-color);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.summary-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+}
+
+@media print {
+    .header-section {
+        background: var(--primary-color);
+    }
+    .experience-item, .education-item {
+        page-break-inside: avoid;
+    }
+    .sticky-nav, #back-to-top {
+        display: none;
+    }
+    .resume-section {
+        page-break-before: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2rem;
+    }
+    .header-section h2 {
+        font-size: 1.2rem;
+    }
+    .contact-info {
+        font-size: 0.9rem;
+    }
+    .sticky-nav .nav {
+        flex-wrap: wrap;
+    }
+    .sticky-nav .nav-link {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+}

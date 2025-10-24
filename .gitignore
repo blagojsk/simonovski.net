@@ -1,0 +1,44 @@
+# IDE and Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Personal Documents
+*.docx
+*.doc
+*.pdf
+*.xlsx
+*.xls
+
+# Node.js (if using npm/yarn)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
