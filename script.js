@@ -119,12 +119,12 @@ function downloadResumePDF() {
 
         yPos = 60;
 
-        // Professional Summary
+        // Introduction
         checkPageBreak(30);
         doc.setFontSize(14);
         doc.setTextColor(...primaryColor);
         doc.setFont('helvetica', 'bold');
-        doc.text('PROFESSIONAL SUMMARY', leftMargin, yPos);
+        doc.text('INTRODUCTION', leftMargin, yPos);
         yPos += 2;
         doc.setDrawColor(...primaryColor);
         doc.setLineWidth(0.5);
@@ -299,58 +299,72 @@ function downloadResumePDF() {
             yPos += 5;
         });
 
-        // Technical Skills
-        checkPageBreak(60);
+        // Certifications
+        checkPageBreak(50);
         doc.setFontSize(14);
         doc.setTextColor(...primaryColor);
         doc.setFont('helvetica', 'bold');
-        doc.text('TECHNICAL SKILLS', leftMargin, yPos);
+        doc.text('CERTIFICATIONS', leftMargin, yPos);
         yPos += 2;
-        doc.line(leftMargin, yPos, 70, yPos);
+        doc.line(leftMargin, yPos, 65, yPos);
         yPos += 7;
 
-        const skills = [
-            {
-                category: 'Server-side',
-                items: 'Java, Spring, Spring Boot, Spring AI, REST, Hibernate, Liquibase, JUnit, Mockito, Arch Unit, ActiveMQ, RabbitMQ, Kafka, Hazelcast, Eureka, Zuul, Hystrix, JWT, JSON, OpenID, SAML, Nginx, WordPress, cPanel'
-            },
-            {
-                category: 'Client-side',
-                items: 'HTML, CSS, JavaScript, NodeJS, React, HTMX'
-            },
-            {
-                category: 'Data',
-                items: 'SQL, PostgreSQL, PgBouncer, PgVector, MySQL, Elasticsearch, Cassandra, LLMs, Ollama'
-            },
-            {
-                category: 'Infrastructure',
-                items: 'AWS, Azure, Google Cloud, Ansible, Terraform, Docker, Kubernetes, Nagios, ELK'
-            },
-            {
-                category: 'Continuous Deployment',
-                items: 'Git, Jenkins, GitLab CI/CD, GitHub Actions, Argo CD, Maven, Gradle, Nexus, SonarQube'
-            },
-            {
-                category: 'Methodologies',
-                items: 'Scrum, Kanban, ITIL, Enabling Team Topologies, C4 Diagrams'
-            }
+        const certifications = [
+            { name: 'Oracle Certified Associate, Java SE 8 Programmer', org: 'Oracle' },
+            { name: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services (AWS)' },
+            { name: 'AWS Certified Developer – Associate', org: 'Amazon Web Services (AWS)' },
+            { name: 'AWS Certified Solutions Architect – Associate', org: 'Amazon Web Services (AWS)' },
+            { name: 'LPI Linux Essentials', org: 'Linux Professional Institute (LPI)' },
+            { name: 'ITIL Foundation Certificate in IT Service Management', org: 'AXELOS Global Best Practice' },
+            { name: 'Professional Scrum Master I (PSM I)', org: 'Scrum.org' },
+            { name: 'Professional Scrum Product Owner I (PSPO I)', org: 'Scrum.org' },
+            { name: 'Cambridge English: Proficiency (CPE)', org: 'Cambridge University Press & Assessment English' },
+            { name: 'Cambridge English: Advanced (CAE)', org: 'Cambridge University Press & Assessment English' },
+            { name: 'Cambridge English: First (FCE)', org: 'Cambridge University Press & Assessment English' }
         ];
 
-        skills.forEach(skill => {
-            checkPageBreak(15);
+        // Split certifications into two columns
+        const colWidth = (rightMargin - leftMargin) / 2 - 5;
+        const col1Certs = certifications.slice(0, 6);
+        const col2Certs = certifications.slice(6);
 
-            doc.setFontSize(10);
-            doc.setTextColor(...secondaryColor);
-            doc.setFont('helvetica', 'bold');
-            doc.text(skill.category, leftMargin, yPos);
-            yPos += 5;
+        const startY = yPos;
+
+        // Column 1
+        col1Certs.forEach(cert => {
+            checkPageBreak(10);
 
             doc.setFontSize(9);
             doc.setTextColor(...textColor);
-            doc.setFont('helvetica', 'normal');
-            const lines = doc.splitTextToSize(skill.items, rightMargin - leftMargin);
+            doc.setFont('helvetica', 'bold');
+            const lines = doc.splitTextToSize('• ' + cert.name, colWidth);
             doc.text(lines, leftMargin, yPos);
-            yPos += lines.length * 4 + 3;
+            yPos += lines.length * 4;
+
+            doc.setFontSize(8);
+            doc.setTextColor(...lightGray);
+            doc.setFont('helvetica', 'normal');
+            doc.text(cert.org, leftMargin + 3, yPos);
+            yPos += 6;
+        });
+
+        // Column 2
+        yPos = startY;
+        const col2X = leftMargin + colWidth + 10;
+
+        col2Certs.forEach(cert => {
+            doc.setFontSize(9);
+            doc.setTextColor(...textColor);
+            doc.setFont('helvetica', 'bold');
+            const lines = doc.splitTextToSize('• ' + cert.name, colWidth);
+            doc.text(lines, col2X, yPos);
+            yPos += lines.length * 4;
+
+            doc.setFontSize(8);
+            doc.setTextColor(...lightGray);
+            doc.setFont('helvetica', 'normal');
+            doc.text(cert.org, col2X + 3, yPos);
+            yPos += 6;
         });
 
         // Education & Training
@@ -431,72 +445,58 @@ function downloadResumePDF() {
             yPos += 3;
         });
 
-        // Certifications
-        checkPageBreak(50);
+        // Technical Skills
+        checkPageBreak(60);
         doc.setFontSize(14);
         doc.setTextColor(...primaryColor);
         doc.setFont('helvetica', 'bold');
-        doc.text('CERTIFICATIONS', leftMargin, yPos);
+        doc.text('TECHNICAL SKILLS', leftMargin, yPos);
         yPos += 2;
-        doc.line(leftMargin, yPos, 65, yPos);
+        doc.line(leftMargin, yPos, 70, yPos);
         yPos += 7;
 
-        const certifications = [
-            { name: 'Oracle Certified Associate, Java SE 8 Programmer', org: 'Oracle' },
-            { name: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services (AWS)' },
-            { name: 'AWS Certified Developer – Associate', org: 'Amazon Web Services (AWS)' },
-            { name: 'AWS Certified Solutions Architect – Associate', org: 'Amazon Web Services (AWS)' },
-            { name: 'LPI Linux Essentials', org: 'Linux Professional Institute (LPI)' },
-            { name: 'ITIL Foundation Certificate in IT Service Management', org: 'AXELOS Global Best Practice' },
-            { name: 'Professional Scrum Master I (PSM I)', org: 'Scrum.org' },
-            { name: 'Professional Scrum Product Owner I (PSPO I)', org: 'Scrum.org' },
-            { name: 'Cambridge English: Proficiency (CPE)', org: 'Cambridge University Press & Assessment English' },
-            { name: 'Cambridge English: Advanced (CAE)', org: 'Cambridge University Press & Assessment English' },
-            { name: 'Cambridge English: First (FCE)', org: 'Cambridge University Press & Assessment English' }
+        const skills = [
+            {
+                category: 'Server-side',
+                items: 'Java, Spring, Spring Boot, Spring AI, REST, Hibernate, Liquibase, JUnit, Mockito, Arch Unit, ActiveMQ, RabbitMQ, Kafka, Hazelcast, Eureka, Zuul, Hystrix, JWT, JSON, OpenID, SAML, Nginx, WordPress, cPanel'
+            },
+            {
+                category: 'Client-side',
+                items: 'HTML, CSS, JavaScript, NodeJS, React, HTMX'
+            },
+            {
+                category: 'Data',
+                items: 'SQL, PostgreSQL, PgBouncer, PgVector, MySQL, Elasticsearch, Cassandra, LLMs, Ollama'
+            },
+            {
+                category: 'Infrastructure',
+                items: 'AWS, Azure, Google Cloud, Ansible, Terraform, Docker, Kubernetes, Nagios, ELK'
+            },
+            {
+                category: 'Continuous Deployment',
+                items: 'Git, Jenkins, GitLab CI/CD, GitHub Actions, Argo CD, Maven, Gradle, Nexus, SonarQube'
+            },
+            {
+                category: 'Methodologies',
+                items: 'Scrum, Kanban, ITIL, Enabling Team Topologies, C4 Diagrams'
+            }
         ];
 
-        // Split certifications into two columns
-        const colWidth = (rightMargin - leftMargin) / 2 - 5;
-        const col1Certs = certifications.slice(0, 6);
-        const col2Certs = certifications.slice(6);
+        skills.forEach(skill => {
+            checkPageBreak(15);
 
-        const startY = yPos;
-
-        // Column 1
-        col1Certs.forEach(cert => {
-            checkPageBreak(10);
+            doc.setFontSize(10);
+            doc.setTextColor(...secondaryColor);
+            doc.setFont('helvetica', 'bold');
+            doc.text(skill.category, leftMargin, yPos);
+            yPos += 5;
 
             doc.setFontSize(9);
             doc.setTextColor(...textColor);
-            doc.setFont('helvetica', 'bold');
-            const lines = doc.splitTextToSize('• ' + cert.name, colWidth);
+            doc.setFont('helvetica', 'normal');
+            const lines = doc.splitTextToSize(skill.items, rightMargin - leftMargin);
             doc.text(lines, leftMargin, yPos);
-            yPos += lines.length * 4;
-
-            doc.setFontSize(8);
-            doc.setTextColor(...lightGray);
-            doc.setFont('helvetica', 'normal');
-            doc.text(cert.org, leftMargin + 3, yPos);
-            yPos += 6;
-        });
-
-        // Column 2
-        yPos = startY;
-        const col2X = leftMargin + colWidth + 10;
-
-        col2Certs.forEach(cert => {
-            doc.setFontSize(9);
-            doc.setTextColor(...textColor);
-            doc.setFont('helvetica', 'bold');
-            const lines = doc.splitTextToSize('• ' + cert.name, colWidth);
-            doc.text(lines, col2X, yPos);
-            yPos += lines.length * 4;
-
-            doc.setFontSize(8);
-            doc.setTextColor(...lightGray);
-            doc.setFont('helvetica', 'normal');
-            doc.text(cert.org, col2X + 3, yPos);
-            yPos += 6;
+            yPos += lines.length * 4 + 3;
         });
 
         // Save the PDF
