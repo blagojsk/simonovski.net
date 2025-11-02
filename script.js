@@ -115,7 +115,7 @@ function downloadResumePDF() {
         doc.text('SOLUTIONS ARCHITECT', 105, 28, { align: 'center' });
 
         doc.setFontSize(9);
-        doc.text('Phone: 00389 75 787 423  |  Location: Skopje, Macedonia  |  Email: blagojsk@gmail.com', 105, 40, { align: 'center' });
+        doc.text('Location: Skopje, Macedonia  |  Email: blagojsk@gmail.com', 105, 40, { align: 'center' });
 
         yPos = 60;
 
@@ -192,7 +192,7 @@ function downloadResumePDF() {
                 ]
             },
             {
-                company: 'AVIATION IT SYSTEM',
+                company: 'Aviation IT SYSTEM',
                 title: 'Software Architect',
                 date: 'April 2024 – August 2025',
                 duties: [
