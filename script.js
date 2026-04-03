@@ -314,6 +314,7 @@ function downloadResumePDF() {
             { name: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services (AWS)' },
             { name: 'AWS Certified Developer – Associate', org: 'Amazon Web Services (AWS)' },
             { name: 'AWS Certified Solutions Architect – Associate', org: 'Amazon Web Services (AWS)' },
+            { name: 'Databricks Certified Data Analyst Associate', org: 'Databricks' },
             { name: 'LPI Linux Essentials', org: 'Linux Professional Institute (LPI)' },
             { name: 'ITIL Foundation Certificate in IT Service Management', org: 'AXELOS Global Best Practice' },
             { name: 'Professional Scrum Master I (PSM I)', org: 'Scrum.org' },
