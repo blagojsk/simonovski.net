@@ -324,21 +324,15 @@ function downloadResumePDF() {
             { name: 'Cambridge English: First (FCE)', org: 'Cambridge University Press & Assessment English' }
         ];
 
-        // Split certifications into two columns
-        const colWidth = (rightMargin - leftMargin) / 2 - 5;
-        const col1Certs = certifications.slice(0, 6);
-        const col2Certs = certifications.slice(6);
+        const certColWidth = rightMargin - leftMargin;
 
-        const startY = yPos;
-
-        // Column 1
-        col1Certs.forEach(cert => {
+        certifications.forEach(cert => {
             checkPageBreak(10);
 
             doc.setFontSize(9);
             doc.setTextColor(...textColor);
             doc.setFont('helvetica', 'bold');
-            const lines = doc.splitTextToSize('• ' + cert.name, colWidth);
+            const lines = doc.splitTextToSize('• ' + cert.name, certColWidth);
             doc.text(lines, leftMargin, yPos);
             yPos += lines.length * 4;
 
@@ -348,29 +342,6 @@ function downloadResumePDF() {
             doc.text(cert.org, leftMargin + 3, yPos);
             yPos += 6;
         });
-
-        const col1EndY = yPos;
-
-        // Column 2
-        yPos = startY;
-        const col2X = leftMargin + colWidth + 10;
-
-        col2Certs.forEach(cert => {
-            doc.setFontSize(9);
-            doc.setTextColor(...textColor);
-            doc.setFont('helvetica', 'bold');
-            const lines = doc.splitTextToSize('• ' + cert.name, colWidth);
-            doc.text(lines, col2X, yPos);
-            yPos += lines.length * 4;
-
-            doc.setFontSize(8);
-            doc.setTextColor(...lightGray);
-            doc.setFont('helvetica', 'normal');
-            doc.text(cert.org, col2X + 3, yPos);
-            yPos += 6;
-        });
-
-        yPos = Math.max(col1EndY, yPos);
 
         // Education & Training
         checkPageBreak(40);
