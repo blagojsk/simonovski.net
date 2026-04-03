@@ -349,6 +349,8 @@ function downloadResumePDF() {
             yPos += 6;
         });
 
+        const col1EndY = yPos;
+
         // Column 2
         yPos = startY;
         const col2X = leftMargin + colWidth + 10;
@@ -367,6 +369,8 @@ function downloadResumePDF() {
             doc.text(cert.org, col2X + 3, yPos);
             yPos += 6;
         });
+
+        yPos = Math.max(col1EndY, yPos);
 
         // Education & Training
         checkPageBreak(40);
