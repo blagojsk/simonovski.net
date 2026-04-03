@@ -300,6 +300,7 @@ function downloadResumePDF() {
         });
 
         // Certifications
+        yPos += 10;
         checkPageBreak(50);
         doc.setFontSize(14);
         doc.setTextColor(...primaryColor);
@@ -344,7 +345,8 @@ function downloadResumePDF() {
         });
 
         // Education & Training
-        checkPageBreak(40);
+        doc.addPage();
+        yPos = 20;
         doc.setFontSize(14);
         doc.setTextColor(...primaryColor);
         doc.setFont('helvetica', 'bold');
