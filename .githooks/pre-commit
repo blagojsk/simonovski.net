@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Regenerate the résumé PDF whenever the page source is being committed, so the two can't drift.
+# Enable once per clone:  git config core.hooksPath .githooks
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)"
+if git diff --cached --name-only | grep -qE '^(index\.html|style\.css)$'; then
+  ./make-pdf.sh
+  git add Blagoj_Simonovski_Resume.pdf
+fi

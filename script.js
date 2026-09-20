@@ -38,7 +38,7 @@
 
     // Scroll-in reveals
     const items = document.querySelectorAll(
-        '.employer-head, .tl-item, .cert-group, .edu-item, .skill-row, .prose-lg'
+        '.employer-head, .tl-item, .cert-row, .edu-item, .skill-row, .prose-lg'
     );
     items.forEach(el => el.classList.add('io'));
     const revealIO = new IntersectionObserver(entries => {
@@ -54,9 +54,4 @@
     // Footer year
     const year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
-
-    // Make sure everything is visible before print, regardless of scroll position
-    window.addEventListener('beforeprint', () => {
-        items.forEach(el => el.classList.add('in'));
-    });
 })();
