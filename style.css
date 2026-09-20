@@ -320,18 +320,17 @@ strong { font-weight: 600; }
    -------------------------------------------------------------------------- */
 
 .section {
-    padding: clamp(3.5rem, 9vh, 6.5rem) 0;
+    padding: clamp(2.75rem, 5vh, 3.25rem) 0;
     border-bottom: 1px solid var(--line);
     scroll-margin-top: var(--nav-h);
 }
-.section:first-of-type { padding-top: clamp(2.5rem, 6vh, 3.5rem); }
 .section:last-of-type { border-bottom: 0; }
 
 .section-head {
     display: flex;
     align-items: baseline;
     gap: 1rem;
-    margin-bottom: clamp(2rem, 5vh, 3rem);
+    margin-bottom: 2.25rem;
 }
 .section-idx {
     font-family: var(--mono);
@@ -604,7 +603,6 @@ strong { font-weight: 600; }
 .footer {
     border-top: 1px solid var(--ink);
     padding: 2.5rem 0 3rem;
-    margin-top: 2rem;
 }
 .footer-grid {
     display: flex;
