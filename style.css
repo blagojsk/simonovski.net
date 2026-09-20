@@ -197,7 +197,7 @@ strong { font-weight: 600; }
 
 .hero {
     position: relative;
-    padding: calc(var(--nav-h) + clamp(3rem, 10vh, 6.5rem)) 0 clamp(3rem, 8vh, 5rem);
+    padding: calc(var(--nav-h) + clamp(3rem, 10vh, 6.5rem)) 0 0;
 }
 
 .hero-grid {
@@ -310,7 +310,7 @@ strong { font-weight: 600; }
 
 .hero-rule {
     width: min(100% - 2 * var(--gutter), var(--wrap));
-    margin: clamp(3rem, 8vh, 5rem) auto 0;
+    margin: clamp(2.5rem, 6vh, 3.5rem) auto 0;
     height: 1px;
     background: var(--ink);
 }
@@ -324,6 +324,7 @@ strong { font-weight: 600; }
     border-bottom: 1px solid var(--line);
     scroll-margin-top: var(--nav-h);
 }
+.section:first-of-type { padding-top: clamp(2.5rem, 6vh, 3.5rem); }
 .section:last-of-type { border-bottom: 0; }
 
 .section-head {
