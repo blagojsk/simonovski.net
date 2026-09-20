@@ -3,447 +3,433 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blagoj Simonovski - Solutions Architect</title>
+    <title>Blagoj Simonovski — AI Augmented System Architect</title>
+    <meta name="description" content="Blagoj Simonovski is an AI Augmented System Architect in Skopje, Macedonia — more than a decade designing cloud-native, event-driven and AI-augmented systems at Scalefocus and Endava.">
+    <meta name="theme-color" content="#faf9f6">
+    <meta property="og:title" content="Blagoj Simonovski — AI Augmented System Architect">
+    <meta property="og:description" content="More than a decade designing cloud-native, event-driven and AI-augmented systems — from pre-sales prototype to production.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://simonovski.net/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23faf9f6'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%231f3fd6'%3EBS%3C/text%3E%3C/svg%3E">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-    <!-- Header -->
-    <div class="header-section">
-        <div class="container">
-            <div class="text-center">
-                <h1 class="fade-in">BLAGOJ SIMONOVSKI</h1>
-                <h2 class="fade-in">SOLUTIONS ARCHITECT</h2>
-                <div class="contact-info d-inline-block fade-in">
-                    <i class="bi bi-geo-alt-fill"></i> Skopje, Macedonia &nbsp;|&nbsp;
-                    <i class="bi bi-envelope-fill"></i> <a href="mailto:blagojsk@gmail.com">blagojsk@gmail.com</a> &nbsp;|&nbsp;
-                    <i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/blagoj-simonovski/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </div>
-                <div class="mt-3 fade-in">
-                    <button onclick="downloadResumePDF()" class="btn btn-primary">
-                        <i class="bi bi-download"></i> Download Resume (PDF)
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <a class="skip-link" href="#about">Skip to content</a>
 
-    <!-- Sticky Navigation -->
-    <nav class="sticky-nav">
-        <div class="container">
-            <ul class="nav nav-pills justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#introduction">
-                        <i class="bi bi-person-fill"></i> Introduction
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">
-                        <i class="bi bi-briefcase-fill"></i> Experience
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#certifications">
-                        <i class="bi bi-award-fill"></i> Certifications
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">
-                        <i class="bi bi-mortarboard-fill"></i> Education
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">
-                        <i class="bi bi-code-slash"></i> Skills
-                    </a>
-                </li>
+    <nav class="topnav" id="topnav" aria-label="Sections">
+        <div class="wrap">
+            <a class="brand" href="#top" aria-label="Back to top">B<span class="brand-dot">.</span>S</a>
+            <ul class="topnav-links">
+                <li><a href="#about"><span class="idx">01</span>About</a></li>
+                <li><a href="#experience"><span class="idx">02</span>Experience</a></li>
+                <li><a href="#certifications"><span class="idx">03</span>Certifications</a></li>
+                <li><a href="#education"><span class="idx">04</span>Education</a></li>
+                <li><a href="#skills"><span class="idx">05</span>Skills</a></li>
             </ul>
+            <a class="btn btn-ghost btn-sm" href="Blagoj_Simonovski_Resume.pdf" download>
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+                PDF
+            </a>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mb-5">
-        <!-- Introduction Section -->
-        <section id="introduction" class="resume-section">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="section-title">Introduction</h3>
-                    <div class="summary-text">
-                        <p>I am a Solutions Architect with over 10 years of experience designing and implementing scalable cloud and software solutions across diverse industries. My expertise encompasses the full software lifecycle, from pre-sales technical consulting and rapid prototyping to high-level architectural design, infrastructure planning, hands-on backend development, database optimization, and DevOps automation.</p>
-                        <p>I have successfully delivered solutions across microservices, event-driven, and serverless architectures on all major cloud platforms (AWS, Azure, Google Cloud), with particular depth in the Java ecosystem, Spring Boot, and modern data technologies including PostgreSQL, vector databases, and LLMs. I excel at building proof-of-concepts that validate technical feasibility and accelerate decision-making, while also supporting sales teams with technical expertise during client engagements.</p>
-                        <p>Throughout my career, I've led cross-functional teams, mentored developers, and driven strategic technical initiatives that balance business objectives with engineering excellence. I thrive in collaborative environments where I can contribute to both the technical vision and the day-to-day problem-solving that brings that vision to life. What truly motivates me is creating software that delivers tangible value to users and organizations, while fostering a culture of continuous improvement, shared learning, and collective success within my teams.</p>
+    <header class="hero" id="top">
+        <div class="wrap hero-grid">
+            <div class="hero-main">
+                <p class="eyebrow reveal" style="--d:0">
+                    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    Skopje, Macedonia
+                </p>
+                <h1 class="hero-name">
+                    <span class="reveal" style="--d:1">Blagoj</span>
+                    <span class="reveal hero-name-last" style="--d:2">Simonovski</span>
+                </h1>
+                <p class="hero-role reveal" style="--d:3">AI Augmented System Architect</p>
+                <div class="hero-actions reveal" style="--d:4">
+                    <a class="btn btn-primary" href="Blagoj_Simonovski_Resume.pdf" download>
+                        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+                        Download résumé
+                    </a>
+                    <a class="btn btn-ghost" href="mailto:blagojsk@gmail.com">
+                        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        blagojsk@gmail.com
+                    </a>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/blagoj-simonovski/" target="_blank" rel="noopener noreferrer">
+                        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <span class="lbl">LinkedIn</span><span class="url">linkedin.com/in/blagoj-simonovski</span>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="hero-side reveal" style="--d:5">
+                <dl class="stats">
+                    <div><dt>Years</dt><dd>10<span class="plus">+</span></dd></div>
+                    <div><dt>Teams led</dt><dd>8</dd></div>
+                    <div><dt>Clouds</dt><dd>3</dd></div>
+                    <div><dt>Certifications</dt><dd>12</dd></div>
+                </dl>
+                <p class="now">
+                    <span class="now-dot" aria-hidden="true"></span>
+                    Currently <strong>Software Architect at Scalefocus</strong>, designing a dynamic scheduling and rostering platform, alongside an aviation document-intelligence platform built on RAG-optimised LLMs.
+                </p>
+            </aside>
+        </div>
+        <div class="hero-rule" aria-hidden="true"></div>
+    </header>
+
+    <main class="wrap">
+
+        <section id="about" class="section">
+            <header class="section-head">
+                <span class="section-idx">01</span>
+                <h2>About</h2>
+            </header>
+            <div class="prose prose-lg">
+                <p>I'm a system architect with more than a decade of experience designing cloud-native, event-driven and AI-augmented platforms for aviation, media, logistics, education and workforce scheduling. My work spans the whole lifecycle — pre-sales consulting and rapid prototyping, architecture and infrastructure design, hands-on Java and Spring Boot development, and DevOps automation on AWS, Azure and Google Cloud. Lately that means PostgreSQL, vector databases and LLM-backed systems. Along the way I lead cross-functional teams, mentor developers and build proof-of-concepts that turn open technical questions into decisions.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <header class="section-head">
+                <span class="section-idx">02</span>
+                <h2>Experience</h2>
+            </header>
+
+            <article class="employer">
+                <header class="employer-head">
+                    <div>
+                        <h3 class="employer-name">Scalefocus</h3>
+                        <p class="employer-path">Software Architect</p>
                     </div>
+                    <p class="employer-span mono">Apr 2024 — Present</p>
+                </header>
+
+                <ol class="timeline">
+                    <li class="tl-item">
+                        <div class="tl-when mono">2026 — ongoing</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Dynamic Scheduling &amp; Rostering Platform</h4>
+                            <p class="tl-role">Solutions Architect</p>
+                            <ul class="tl-duties">
+                                <li>Architecture and infrastructure design</li>
+                                <li>Domain Driven Design and data architecture for shifts, availability and scheduling constraints</li>
+                                <li>Design of the rule-driven scheduling engine and roster generation flow</li>
+                                <li>Event-driven integration with workforce and time-tracking systems</li>
+                                <li>Code and development practices review</li>
+                                <li>Project and delivery management</li>
+                                <li>Discovery and business analysis</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">Aug 2025 — ongoing</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Aviation AI RAG Platform</h4>
+                            <p class="tl-role">Solutions Architect</p>
+                            <ul class="tl-duties">
+                                <li>Architecture and infrastructure design</li>
+                                <li>Domain Driven Design and data architecture</li>
+                                <li>Integration of web services with RAG-optimised LLMs</li>
+                                <li>Integration of Quarkus with LangChain4j</li>
+                                <li>Deploying containerised Ollama models</li>
+                                <li>Code and development practices review</li>
+                                <li>Project and delivery management</li>
+                                <li>Discovery and business analysis</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">Sep 2025 — Nov 2025</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Logistics Web Platform</h4>
+                            <p class="tl-role">Solutions Architect</p>
+                            <ul class="tl-duties">
+                                <li>Architecture and infrastructure design</li>
+                                <li>Domain Driven Design and data architecture</li>
+                                <li>Order processing with Spring AI and the Gemini API</li>
+                                <li>Building Vaadin UIs</li>
+                                <li>Code and development practices review</li>
+                                <li>Project and delivery management</li>
+                                <li>Discovery and business analysis</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">Jan 2025 — Oct 2025</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">eSchool Platform</h4>
+                            <p class="tl-role">Solutions Architect</p>
+                            <ul class="tl-duties">
+                                <li>Architecture and infrastructure design</li>
+                                <li>Domain Driven Design and data architecture</li>
+                                <li>Code and development practices review</li>
+                                <li>Project and delivery management</li>
+                                <li>Discovery and business analysis</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">Apr 2024 — Aug 2025</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Aviation IT System</h4>
+                            <p class="tl-role">Software Architect</p>
+                            <ul class="tl-duties">
+                                <li>Architecture and infrastructure design</li>
+                                <li>Integration planning</li>
+                                <li>Code and development practices review</li>
+                                <li>Discovery and business analysis</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </article>
+
+            <article class="employer">
+                <header class="employer-head">
+                    <div>
+                        <h3 class="employer-name">Endava</h3>
+                        <p class="employer-path">Software Developer → DevOps Team Lead → Senior Software Developer → Software Design Lead</p>
+                    </div>
+                    <p class="employer-span mono">Sep 2016 — Apr 2024</p>
+                </header>
+
+                <ol class="timeline">
+                    <li class="tl-item">
+                        <div class="tl-when mono">Jan 2021 — Apr 2024</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Media-Marketing Web Platform</h4>
+                            <p class="tl-role">Solutions Architect</p>
+                            <ul class="tl-duties">
+                                <li>Led 8 development teams in designing and developing the application services</li>
+                                <li>Participated in an architectural board that oversaw 300 people and the entire delivery process</li>
+                                <li>High-level software and infrastructure design</li>
+                                <li>Continuous implementation of an evolving microservices architecture</li>
+                                <li>Extracting development targets from business roadmaps and feature design</li>
+                                <li>Code and practices review, planning non-functional improvements</li>
+                                <li>Developed PoCs</li>
+                                <li>Helped with major incidents and bug fixing</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">Oct 2022 — Sep 2023</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Business-Intelligence Solution</h4>
+                            <p class="tl-role">Solutions Architect</p>
+                            <ul class="tl-duties">
+                                <li>Design and implementation of network, infrastructure, application and data layers</li>
+                                <li>Backend development in Java and Spring Boot</li>
+                                <li>Code reviews and bug fixing</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">Jan 2019 — Jan 2021</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Media-Marketing Web Platform</h4>
+                            <p class="tl-role">Development Team Lead</p>
+                            <ul class="tl-duties">
+                                <li>Led a 10-person development team</li>
+                                <li>Design and development of application components</li>
+                                <li>Technical tasks involving code refactoring and improvement</li>
+                                <li>Implementation of high-level design and architecture</li>
+                                <li>Client demo presentations</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">May 2017 — Jan 2019</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Media-Marketing Infrastructure Platform</h4>
+                            <p class="tl-role">DevOps Team Lead</p>
+                            <ul class="tl-duties">
+                                <li>Supported every phase of the software development lifecycle and responded to incidents</li>
+                                <li>Design and implementation of CI/CD pipelines and release strategies</li>
+                                <li>Design and implementation of AWS-based IaaS and PaaS solutions</li>
+                                <li>Database architecture design and administration</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="tl-item">
+                        <div class="tl-when mono">Sep 2016 — Jan 2017</div>
+                        <div class="tl-body">
+                            <h4 class="tl-title">Timekeeping App</h4>
+                            <p class="tl-role">Software Engineer</p>
+                            <ul class="tl-duties">
+                                <li>Database design and development</li>
+                                <li>Network communication planning</li>
+                                <li>Feature development in Java</li>
+                                <li>Code reviews and bug fixing</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </article>
+        </section>
+
+        <section id="certifications" class="section">
+            <header class="section-head">
+                <span class="section-idx">03</span>
+                <h2>Certifications</h2>
+            </header>
+
+            <div class="certs">
+                <div class="cert-row">
+                    <h3 class="cert-cat">Cloud &amp; Data</h3>
+                    <ul class="cert-list">
+                        <li><strong>AWS Certified Solutions Architect – Associate</strong><span>Amazon Web Services</span></li>
+                        <li><strong>AWS Certified Developer – Associate</strong><span>Amazon Web Services</span></li>
+                        <li><strong>AWS Certified Cloud Practitioner</strong><span>Amazon Web Services</span></li>
+                        <li><strong>Databricks Certified Data Analyst Associate</strong><span>Databricks</span></li>
+                    </ul>
+                </div>
+                <div class="cert-row">
+                    <h3 class="cert-cat">Engineering</h3>
+                    <ul class="cert-list">
+                        <li><strong>Oracle Certified Associate, Java SE 8 Programmer</strong><span>Oracle</span></li>
+                        <li><strong>LPI Linux Essentials</strong><span>Linux Professional Institute</span></li>
+                    </ul>
+                </div>
+                <div class="cert-row">
+                    <h3 class="cert-cat">Process &amp; Delivery</h3>
+                    <ul class="cert-list">
+                        <li><strong>ITIL Foundation in IT Service Management</strong><span>AXELOS</span></li>
+                        <li><strong>Professional Scrum Master I (PSM I)</strong><span>Scrum.org</span></li>
+                        <li><strong>Professional Scrum Product Owner I (PSPO I)</strong><span>Scrum.org</span></li>
+                    </ul>
+                </div>
+                <div class="cert-row">
+                    <h3 class="cert-cat">Language</h3>
+                    <ul class="cert-list">
+                        <li><strong>Cambridge English: Proficiency (CPE)</strong><span>Cambridge University Press &amp; Assessment</span></li>
+                        <li><strong>Cambridge English: Advanced (CAE)</strong><span>Cambridge University Press &amp; Assessment</span></li>
+                        <li><strong>Cambridge English: First (FCE)</strong><span>Cambridge University Press &amp; Assessment</span></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="resume-section">
-            <h3 class="section-title">Professional Experience</h3>
+        <section id="education" class="section">
+            <header class="section-head">
+                <span class="section-idx">04</span>
+                <h2>Education &amp; Training</h2>
+            </header>
 
-            <div class="experience-item">
-                <div class="company-name">Aviation AI RAG Platform</div>
-                <div class="job-title">Solutions Architect</div>
-                <div class="date-range">August 2025 - ongoing</div>
-                <ul class="mt-3">
-                    <li>Architecture and infrastructure design</li>
-                    <li>Domain Driven Design and Data Architecture</li>
-                    <li>Integration of web services with RAG-optimized LLMs</li>
-                    <li>Integration of Quarkus with LangChain4j</li>
-                    <li>Deploying containerized Ollama models</li>
-                    <li>Code and development practices review</li>
-                    <li>Project and delivery management</li>
-                    <li>Discovery and business analysis</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">Logistics Web Platform</div>
-                <div class="job-title">Solutions Architect</div>
-                <div class="date-range">September 2025 - November 2025</div>
-                <ul class="mt-3">
-                    <li>Architecture and infrastructure design</li>
-                    <li>Domain Driven Design and Data Architecture</li>
-                    <li>Order processing with Spring AI and Gemini API</li>
-                    <li>Building Vaadin UIs</li>
-                    <li>Code and development practices review</li>
-                    <li>Project and delivery management</li>
-                    <li>Discovery and business analysis</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">eSchool Platform</div>
-                <div class="job-title">Solutions Architect</div>
-                <div class="date-range">January 2025 - October 2025</div>
-                <ul class="mt-3">
-                    <li>Architecture and infrastructure design</li>
-                    <li>Domain Driven Design and Data Architecture</li>
-                    <li>Code and development practices review</li>
-                    <li>Project and delivery management</li>
-                    <li>Discovery and business analysis</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">Aviation IT System</div>
-                <div class="job-title">Software Architect</div>
-                <div class="date-range">April 2024 - August 2025</div>
-                <ul class="mt-3">
-                    <li>Architecture and infrastructure design</li>
-                    <li>Integration planning</li>
-                    <li>Code and development practices review</li>
-                    <li>Discovery and business analysis</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">Media-Marketing Web Platform</div>
-                <div class="job-title">Solutions Architect</div>
-                <div class="date-range">January 2021 - April 2024</div>
-                <ul class="mt-3">
-                    <li>Led 8 development teams in designing and developing the application services</li>
-                    <li>Participated in an architectural board that oversaw 300 people and the entire delivery process</li>
-                    <li>High-level software and infrastructure design</li>
-                    <li>Continuous implementation of evolving microservices architecture</li>
-                    <li>Extracting development targets from business roadmaps and feature design</li>
-                    <li>Code and practices review, planning non-functional improvements</li>
-                    <li>Developed PoCs</li>
-                    <li>Helped with major incidents and bug fixing</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">Business-Intelligence Solution</div>
-                <div class="job-title">Solutions Architect</div>
-                <div class="date-range">October 2022 - September 2023</div>
-                <ul class="mt-3">
-                    <li>Design and implementation of network, infrastructure, application and data layers</li>
-                    <li>Backend development in Java and Spring Boot</li>
-                    <li>Code reviews</li>
-                    <li>Bug fixing</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">Media-Marketing Web Platform</div>
-                <div class="job-title">Development Team Lead</div>
-                <div class="date-range">January 2019 - January 2021</div>
-                <ul class="mt-3">
-                    <li>Led a 10-person development team</li>
-                    <li>Design and development of application components</li>
-                    <li>Technical tasks involving code refactoring and improvement</li>
-                    <li>Bug fixing</li>
-                    <li>Implementation of high-level design and architecture</li>
-                    <li>Client demo presentations</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">Media-Marketing Infrastructure Platform</div>
-                <div class="job-title">DevOps Team Lead</div>
-                <div class="date-range">May 2017 - January 2019</div>
-                <ul class="mt-3">
-                    <li>Supported every phase of the software development lifecycle and responded to incidents</li>
-                    <li>Design and implementation of CI/CD pipelines and release strategies</li>
-                    <li>Design and implementation of AWS-based IaaS and PaaS solutions</li>
-                    <li>Database architecture design and administration</li>
-                    <li>Incident response</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-name">Timekeeping App</div>
-                <div class="job-title">Software Engineer</div>
-                <div class="date-range">September 2016 - January 2017</div>
-                <ul class="mt-3">
-                    <li>Database design and development</li>
-                    <li>Network communication planning</li>
-                    <li>Feature development in Java</li>
-                    <li>Code reviews</li>
-                    <li>Bug fixing</li>
-                </ul>
-            </div>
+            <ol class="edu-list">
+                <li class="edu-item">
+                    <div class="edu-when mono">Degree</div>
+                    <div>
+                        <h3 class="edu-title">BSc in Electrical Engineering</h3>
+                        <p class="edu-sub">Computer System Engineering, Automation and Robotics</p>
+                        <p class="edu-where">Faculty of Electrical Engineering and Information Technologies, Skopje</p>
+                    </div>
+                </li>
+                <li class="edu-item">
+                    <div class="edu-when mono">2016</div>
+                    <div>
+                        <h3 class="edu-title">Mission on Mars Robot Challenge</h3>
+                        <p class="edu-sub">Team engineering competition — 16th place in world rankings</p>
+                        <p class="edu-where">MathWorks, Paris</p>
+                    </div>
+                </li>
+                <li class="edu-item">
+                    <div class="edu-when mono">2016</div>
+                    <div>
+                        <h3 class="edu-title">Eurocontrol Hackathon</h3>
+                        <p class="edu-sub">Communication feature for air traffic control</p>
+                    </div>
+                </li>
+                <li class="edu-item">
+                    <div class="edu-when mono">2016</div>
+                    <div>
+                        <h3 class="edu-title">Seavus Engineering Competition</h3>
+                        <p class="edu-sub">2nd place</p>
+                    </div>
+                </li>
+                <li class="edu-item">
+                    <div class="edu-when mono">2015</div>
+                    <div>
+                        <h3 class="edu-title">International Training for Foreign Students</h3>
+                        <p class="edu-where">St. Wilfrid's High School, Leeds, England</p>
+                    </div>
+                </li>
+            </ol>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications" class="resume-section">
-            <h3 class="section-title">Certifications</h3>
+        <section id="skills" class="section">
+            <header class="section-head">
+                <span class="section-idx">05</span>
+                <h2>Skills</h2>
+            </header>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>Oracle Certified Associate, Java SE 8 Programmer</strong><br>
-                        <small class="text-muted">Oracle</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>AWS Certified Cloud Practitioner</strong><br>
-                        <small class="text-muted">Amazon Web Services (AWS)</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>AWS Certified Developer – Associate</strong><br>
-                        <small class="text-muted">Amazon Web Services (AWS)</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>AWS Certified Solutions Architect – Associate</strong><br>
-                        <small class="text-muted">Amazon Web Services (AWS)</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>Databricks Certified Data Analyst Associate</strong><br>
-                        <small class="text-muted">Databricks</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>LPI Linux Essentials</strong><br>
-                        <small class="text-muted">Linux Professional Institute (LPI)</small>
-                    </div>
+            <div class="skills">
+                <div class="skill-row">
+                    <h3 class="skill-cat">Server-side</h3>
+                    <ul class="chips">
+                        <li>Java</li><li>Spring</li><li>Spring Boot</li><li>Quarkus</li><li>REST</li><li>Hibernate</li><li>Liquibase</li><li>JUnit</li><li>Mockito</li><li>ArchUnit</li><li>ActiveMQ</li><li>RabbitMQ</li><li>Kafka</li><li>Hazelcast</li><li>Eureka</li><li>Zuul</li><li>Hystrix</li><li>JWT</li><li>OpenID</li><li>SAML</li><li>Nginx</li><li>WordPress</li><li>cPanel</li>
+                    </ul>
                 </div>
-                <div class="col-md-6">
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>ITIL Foundation Certificate in IT Service Management</strong><br>
-                        <small class="text-muted">AXELOS Global Best Practice</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>Professional Scrum Master I (PSM I)</strong><br>
-                        <small class="text-muted">Scrum.org</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>Professional Scrum Product Owner I (PSPO I)</strong><br>
-                        <small class="text-muted">Scrum.org</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>Cambridge English: Proficiency (CPE)</strong><br>
-                        <small class="text-muted">Cambridge University Press & Assessment English</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>Cambridge English: Advanced (CAE)</strong><br>
-                        <small class="text-muted">Cambridge University Press & Assessment English</small>
-                    </div>
-                    <div class="cert-item">
-                        <i class="bi bi-patch-check-fill"></i>
-                        <strong>Cambridge English: First (FCE)</strong><br>
-                        <small class="text-muted">Cambridge University Press & Assessment English</small>
-                    </div>
+                <div class="skill-row">
+                    <h3 class="skill-cat">Client-side</h3>
+                    <ul class="chips">
+                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Node.js</li><li>React</li><li>HTMX</li><li>Vaadin</li>
+                    </ul>
+                </div>
+                <div class="skill-row">
+                    <h3 class="skill-cat">AI</h3>
+                    <ul class="chips">
+                        <li>Claude</li><li>Codex</li><li>Antigravity</li><li>Spring AI</li><li>LangChain4j</li><li>LLMs</li><li>RAG</li><li>pgvector</li><li>Ollama</li><li>Gemini API</li>
+                    </ul>
+                </div>
+                <div class="skill-row">
+                    <h3 class="skill-cat">Data</h3>
+                    <ul class="chips">
+                        <li>SQL</li><li>PostgreSQL</li><li>PgBouncer</li><li>MySQL</li><li>Elasticsearch</li><li>Cassandra</li>
+                    </ul>
+                </div>
+                <div class="skill-row">
+                    <h3 class="skill-cat">Infrastructure</h3>
+                    <ul class="chips">
+                        <li>AWS</li><li>Azure</li><li>Google Cloud</li><li>Hetzner</li><li>Contabo</li><li>Ansible</li><li>Terraform</li><li>Docker</li><li>Kubernetes</li><li>Nagios</li><li>ELK</li>
+                    </ul>
+                </div>
+                <div class="skill-row">
+                    <h3 class="skill-cat">Delivery</h3>
+                    <ul class="chips">
+                        <li>Git</li><li>Jenkins</li><li>GitLab CI/CD</li><li>GitHub Actions</li><li>Argo CD</li><li>Maven</li><li>Gradle</li><li>Nexus</li><li>SonarQube</li>
+                    </ul>
+                </div>
+                <div class="skill-row">
+                    <h3 class="skill-cat">Methods</h3>
+                    <ul class="chips">
+                        <li>Scrum</li><li>Kanban</li><li>ITIL</li><li>Domain Driven Design</li><li>Team Topologies</li><li>C4 Diagrams</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="resume-section">
-            <h3 class="section-title">Education & Training</h3>
+    </main>
 
-            <div class="education-item">
-                <div class="job-title">Bachelor of Science in Electrical Engineering</div>
-                <div class="company-name">Computer System Engineering, Automation and Robotics</div>
-                <div class="mt-2">Faculty of Electrical Engineering and Information Technologies – Skopje</div>
-            </div>
-
-            <div class="education-item">
-                <div class="job-title">International Training for Foreign Students</div>
-                <div class="company-name">St. Wilfrid's High School</div>
-                <div class="mt-2">Leeds, England</div>
-                <div class="date-range">2015</div>
-            </div>
-
-            <div class="education-item">
-                <div class="job-title">Team Engineering Competition - Mission on Mars Robot Challenge</div>
-                <div class="mt-2">MathWorks in Paris, France</div>
-                <div class="date-range">2016 - 16th place by world rankings</div>
-            </div>
-
-            <div class="education-item">
-                <div class="job-title">Communication Feature for Air Traffic Control</div>
-                <div class="company-name">Eurocontrol Hackathon</div>
-                <div class="date-range">2016</div>
-            </div>
-
-            <div class="education-item">
-                <div class="job-title">Seavus Engineering Competition</div>
-                <div class="date-range">2016 - 2nd place</div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="resume-section">
-            <h3 class="section-title">Technical Skills</h3>
-
-            <div class="skill-category">
-                <div class="skill-category-title"><i class="bi bi-gear-fill"></i> Server-side</div>
-                <div>
-                    <span class="skill-badge">Java</span>
-                    <span class="skill-badge">Spring</span>
-                    <span class="skill-badge">Spring Boot</span>
-                    <span class="skill-badge">Spring AI</span>
-                    <span class="skill-badge">REST</span>
-                    <span class="skill-badge">Hibernate</span>
-                    <span class="skill-badge">Liquibase</span>
-                    <span class="skill-badge">JUnit</span>
-                    <span class="skill-badge">Mockito</span>
-                    <span class="skill-badge">ArchUnit</span>
-                    <span class="skill-badge">ActiveMQ</span>
-                    <span class="skill-badge">RabbitMQ</span>
-                    <span class="skill-badge">Kafka</span>
-                    <span class="skill-badge">Hazelcast</span>
-                    <span class="skill-badge">Eureka</span>
-                    <span class="skill-badge">Zuul</span>
-                    <span class="skill-badge">Hystrix</span>
-                    <span class="skill-badge">JWT</span>
-                    <span class="skill-badge">JSON</span>
-                    <span class="skill-badge">OpenID</span>
-                    <span class="skill-badge">SAML</span>
-                    <span class="skill-badge">Nginx</span>
-                    <span class="skill-badge">WordPress</span>
-                    <span class="skill-badge">cPanel</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-category-title"><i class="bi bi-display"></i> Client-side</div>
-                <div>
-                    <span class="skill-badge">HTML</span>
-                    <span class="skill-badge">CSS</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">NodeJS</span>
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">HTMX</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-category-title"><i class="bi bi-database"></i> Data</div>
-                <div>
-                    <span class="skill-badge">SQL</span>
-                    <span class="skill-badge">PostgreSQL</span>
-                    <span class="skill-badge">PgBouncer</span>
-                    <span class="skill-badge">PgVector</span>
-                    <span class="skill-badge">MySQL</span>
-                    <span class="skill-badge">Elasticsearch</span>
-                    <span class="skill-badge">Cassandra</span>
-                    <span class="skill-badge">LLMs</span>
-                    <span class="skill-badge">Ollama</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-category-title"><i class="bi bi-cloud"></i> Infrastructure</div>
-                <div>
-                    <span class="skill-badge">AWS</span>
-                    <span class="skill-badge">Azure</span>
-                    <span class="skill-badge">Google Cloud</span>
-                    <span class="skill-badge">Ansible</span>
-                    <span class="skill-badge">Terraform</span>
-                    <span class="skill-badge">Docker</span>
-                    <span class="skill-badge">Kubernetes</span>
-                    <span class="skill-badge">Nagios</span>
-                    <span class="skill-badge">ELK</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-category-title"><i class="bi bi-arrow-repeat"></i> Continuous Deployment</div>
-                <div>
-                    <span class="skill-badge">Git</span>
-                    <span class="skill-badge">Jenkins</span>
-                    <span class="skill-badge">GitLab CI/CD</span>
-                    <span class="skill-badge">GitHub Actions</span>
-                    <span class="skill-badge">Argo CD</span>
-                    <span class="skill-badge">Maven</span>
-                    <span class="skill-badge">Gradle</span>
-                    <span class="skill-badge">Nexus</span>
-                    <span class="skill-badge">SonarQube</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <div class="skill-category-title"><i class="bi bi-diagram-3"></i> Methodologies</div>
-                <div>
-                    <span class="skill-badge">Scrum</span>
-                    <span class="skill-badge">Kanban</span>
-                    <span class="skill-badge">ITIL</span>
-                    <span class="skill-badge">Enabling Team Topologies</span>
-                    <span class="skill-badge">C4 Diagrams</span>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-light text-center py-4 mt-5">
-        <div class="container">
-            <p class="mb-0 text-muted">© 2025 Blagoj Simonovski. All rights reserved.</p>
+    <footer class="footer">
+        <div class="wrap footer-grid">
+            <p class="footer-name">Blagoj Simonovski</p>
+            <p class="footer-links">
+                <a href="mailto:blagojsk@gmail.com">blagojsk@gmail.com</a>
+                <a href="https://www.linkedin.com/in/blagoj-simonovski/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </p>
+            <p class="footer-copy mono">© <span id="year">2026</span> — Skopje</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="Back to top"
-            _="on click scroll window to 0 smoothly">
-        <i class="bi bi-arrow-up"></i>
+    <button id="back-to-top" class="totop" type="button" aria-label="Back to top">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m0 0l-6 6m6-6l6 6"/></svg>
     </button>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- jsPDF for PDF generation -->
-    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-
-    <!-- Custom JS -->
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=4" defer></script>
 </body>
 </html>

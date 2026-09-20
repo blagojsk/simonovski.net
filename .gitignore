@@ -17,6 +17,7 @@ desktop.ini
 *.docx
 *.doc
 *.pdf
+!Blagoj_Simonovski_Resume.pdf
 *.xlsx
 *.xls
 
